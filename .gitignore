@@ -1,6 +1,12 @@
 # Prerequisites
 *.d
-
+**/**.cert
+**/**.key
+**/**.cer
+**/**.crt
+**/**.log
+ssl/dev.jonnattan.com.crt
+ssl/dev.jonnattan.com.key
 # Compiled Object files
 *.slo
 *.lo
