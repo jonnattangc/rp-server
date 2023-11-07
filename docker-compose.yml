@@ -7,12 +7,10 @@ services:
     volumes:
       - "./html:/var/www/html"
       - "./conf/ngnix.conf:/etc/nginx/nginx.conf"
-      - "./conf/default.conf:/etc/nginx/sites-available/default"
+      - "./conf/default.api.conf:/etc/nginx/sites-available/default"
       - "./conf/mime.types:/etc/nginx/mime.types"
       - "./logs:/var/log/nginx"
       - "./ssl:/etc/ssl"
-      #- "./logs/access_http.log:/usr/share/nginx/logs/access_http.log"
-      #- "./logs/access_https.log:/usr/share/nginx/logs/access_https.log"
     environment:
       - TZ:UTC-4
     ports:
