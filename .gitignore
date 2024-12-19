@@ -13,6 +13,7 @@ ssl/dev.jonnattan.com.key
 *.lo
 *.o
 *.obj
+logs/*
 
 # Precompiled Headers
 *.gch
