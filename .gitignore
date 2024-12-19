@@ -5,6 +5,7 @@
 **/**.cer
 **/**.crt
 **/**.log
+**/.well-known/
 ssl/dev.jonnattan.com.crt
 ssl/dev.jonnattan.com.key
 # Compiled Object files
