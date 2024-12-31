@@ -5,9 +5,10 @@
 **/**.cer
 **/**.crt
 **/**.log
+**/**.zip
 **/.well-known/
-ssl/dev.jonnattan.com.crt
-ssl/dev.jonnattan.com.key
+ssl/ssl_certificate.crt
+ssl/ssl_certificate_key.key
 # Compiled Object files
 *.slo
 *.lo
