@@ -1,4 +1,3 @@
-version: "3.9"
 services:
   nginx:
     container_name: reverse-proxy
@@ -8,11 +7,12 @@ services:
       - "./html:/var/www/html"
       - "./conf/ngnix.conf:/etc/nginx/nginx.conf"
       - "./conf/default.conf:/etc/nginx/sites-available/default"
+      - "./conf/jonna_cl.conf:/etc/nginx/conf.d/jonna.cl.conf"
+      - "./conf/bcp_cl.conf:/etc/nginx/conf.d/bcp.cl.conf"
+      - "./conf/jonnattan_cl.conf:/etc/nginx/conf.d/jonnattan.cl.conf"
       - "./conf/mime.types:/etc/nginx/mime.types"
       - "./logs:/var/log/nginx"
       - "./ssl:/etc/ssl"
-      #- "./logs/access_http.log:/usr/share/nginx/logs/access_http.log"
-      #- "./logs/access_https.log:/usr/share/nginx/logs/access_https.log"
     environment:
       - TZ:UTC-4
     ports:

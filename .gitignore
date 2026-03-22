@@ -5,13 +5,16 @@
 **/**.cer
 **/**.crt
 **/**.log
-ssl/dev.jonnattan.com.crt
-ssl/dev.jonnattan.com.key
+**/**.zip
+**/.well-known/
+ssl/ssl_certificate.crt
+ssl/ssl_certificate_key.key
 # Compiled Object files
 *.slo
 *.lo
 *.o
 *.obj
+logs/*
 
 # Precompiled Headers
 *.gch
