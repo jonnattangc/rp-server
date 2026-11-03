@@ -10,11 +10,12 @@ services:
       - "./conf/jonna_cl.conf:/etc/nginx/conf.d/jonna.cl.conf"
       - "./conf/bcp_cl.conf:/etc/nginx/conf.d/bcp.cl.conf"
       - "./conf/jonnattan_cl.conf:/etc/nginx/conf.d/jonnattan.cl.conf"
+      - "./conf/jonnatech_cl.conf:/etc/nginx/conf.d/jonnatech.cl.conf"
+      - "./conf/au_com.conf:/etc/nginx/conf.d/au.com.conf"
       - "./conf/mime.types:/etc/nginx/mime.types"
       - "./logs:/var/log/nginx"
       - "./ssl:/etc/ssl"
     environment:
       - TZ:UTC-4
     ports:
-      - "80:80"
-      - "443:443"
+      - "5555:80"
