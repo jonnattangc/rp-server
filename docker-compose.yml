@@ -1,7 +1,10 @@
 services:
   nginx:
     container_name: reverse-proxy
-    image: ubuntu/nginx:1.18-22.04_beta
+    image: nginx:stable-trixie
+    build:
+      context: .
+      dockerfile: Dockerfile
     restart: always
     volumes:
       - "./html:/var/www/html"
