@@ -37,7 +37,7 @@ server {
 
     location  ^~ / {
       proxy_pass_request_headers    on;
-      proxy_pass                    http://hp.jonnattan:3000/;
+      proxy_pass                    http://192.168.1.88:3000/;
       proxy_http_version            1.1;
       proxy_set_header              Upgrade $http_upgrade;
       proxy_set_header              Connection "upgrade";
@@ -51,7 +51,7 @@ server {
     }
 
     location /ws {
-      proxy_pass                  http://mini.jonnattan:8055;
+      proxy_pass                  http://192.168.1.72:8055;
       proxy_http_version          1.1;
       proxy_set_header            Upgrade $http_upgrade;
       proxy_set_header            Connection "upgrade";
@@ -68,17 +68,17 @@ server {
 
     location /privacity {
       proxy_pass_request_headers  on;
-      proxy_pass                  http://mini.jonnattan:8085/privacity;
+      proxy_pass                  http://192.168.1.72:8085/privacity;
     }
 
     location /terms {
       proxy_pass_request_headers  on;
-      proxy_pass                  http://mini.jonnattan:8085/terms;
+      proxy_pass                  http://192.168.1.72:8085/terms;
     }
 
     location ^~ /page {
       proxy_pass_request_headers  on;
-      proxy_pass                  http://mini.jonnattan:8085/page;
+      proxy_pass                  http://192.168.1.72:8085/page;
       proxy_set_header            Host $host;
       proxy_set_header            X-Real-IP $remote_addr;
       proxy_set_header            X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -89,7 +89,7 @@ server {
 
     location ^~ /dreams {
       proxy_pass_request_headers  on;
-      proxy_pass                  http://mini.jonnattan:8085/dreams;
+      proxy_pass                  http://192.168.1.72:8085/dreams;
     }
 
     location /email {
@@ -99,7 +99,7 @@ server {
       proxy_set_header                  X-Forwarded-For $proxy_add_x_forwarded_for;
       proxy_set_header                  X-Forwarded-Proto https;
       proxy_set_header                  X-Forwarded-Host $host;
-      proxy_pass                        http://mini.jonnattan:8070/email;
+      proxy_pass                        http://192.168.1.72:8070/email;
     }
 
     location /llm {
@@ -109,17 +109,17 @@ server {
       proxy_set_header                  X-Forwarded-For $proxy_add_x_forwarded_for;
       proxy_set_header                  X-Forwarded-Proto https;
       proxy_set_header                  X-Forwarded-Host $host;
-      proxy_pass                        http://mini.jonnattan:8065/llm;
+      proxy_pass                        http://192.168.1.72:8065/llm;
     }
 
     location ^~ /checkall {
       proxy_pass_request_headers        on;
-      proxy_pass                        http://mini.jonnattan:8085/checkall;
+      proxy_pass                        http://192.168.1.72:8085/checkall;
     }
 
     location ^~ /logia {
       proxy_pass_request_headers        on;
-      proxy_pass                        http://mini.jonnattan:8085/logia;
+      proxy_pass                        http://192.168.1.72:8085/logia;
       proxy_set_header                  Host $host;
       proxy_set_header                  X-Real-IP  $remote_addr;
       proxy_set_header                  X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -129,32 +129,32 @@ server {
     }
 
     location /aniversario {
-      proxy_pass                        http://mini.jonnattan:8085/aniversario;
+      proxy_pass                        http://192.168.1.72:8085/aniversario;
     }
 
     location /cxp {
       proxy_pass_request_headers        on;
-      proxy_pass                        http://mini.jonnattan:8085/cxp;
+      proxy_pass                        http://192.168.1.72:8085/cxp;
     }
     
     location /zlr {
       proxy_pass_request_headers        on;
-      proxy_pass                        http://mini.jonnattan:8085/zlr;
+      proxy_pass                        http://192.168.1.72:8085/zlr;
     }
 
     location ^~ /waza {
       proxy_pass_request_headers        on;
-      proxy_pass                        http://mini.jonnattan:8085/waza;
+      proxy_pass                        http://192.168.1.72:8085/waza;
     }
 
     location ^~ /ucc {
       proxy_pass_request_headers        on;
-      proxy_pass                        http://mini.jonnattan:8085/ucc;
+      proxy_pass                        http://192.168.1.72:8085/ucc;
     }
 
     location ^~ /dernede {
       proxy_pass_request_headers        on;
-      proxy_pass                        http://mini.jonnattan:8085/dernede;
+      proxy_pass                        http://192.168.1.72:8085/dernede;
     }
 
     location /mobile {
@@ -164,12 +164,12 @@ server {
       proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
       proxy_set_header X-Forwarded-Proto  https;
       proxy_set_header X-Forwarded-Host   $host;
-      proxy_pass                          http://mini.jonnattan:8085/mobile;
+      proxy_pass                          http://192.168.1.72:8085/mobile;
     }
 
     location ^~ /scraper {
       proxy_pass_request_headers          on;
-      proxy_pass                          http://mini.jonnattan:8090/scraper;
+      proxy_pass                          http://192.168.1.72:8090/scraper;
       proxy_set_header                    Host $host;
       proxy_set_header                    X-Real-IP $remote_addr;
       proxy_set_header                    X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -180,7 +180,7 @@ server {
 
     location ^~ /docs {
       proxy_pass_request_headers          on;
-      proxy_pass                          http://mini.jonnattan:8095/docs;
+      proxy_pass                          http://192.168.1.72:8095/docs;
       proxy_set_header                    Host $host;
       proxy_set_header                    X-Real-IP $remote_addr;
       proxy_set_header                    X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -191,7 +191,7 @@ server {
 
     location ^~ /geo {
       proxy_pass_request_headers          on;
-      proxy_pass                          http://mini.jonnattan:8075/geo;
+      proxy_pass                          http://192.168.1.72:8075/geo;
       proxy_set_header                    Host $host;
       proxy_set_header                    X-Real-IP $remote_addr;
       proxy_set_header                    X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -207,7 +207,7 @@ server {
       proxy_set_header                  X-Forwarded-For $proxy_add_x_forwarded_for;
       proxy_set_header                  X-Forwarded-Proto https;
       proxy_set_header                  X-Forwarded-Host $host;
-      proxy_pass                        http://mini.jonnattan:8060/notification;
+      proxy_pass                        http://192.168.1.72:8060/notification;
     }
 }
 
@@ -226,7 +226,7 @@ server {
 
     location /status$ {
       proxy_pass_request_headers          on;
-      proxy_pass                          http://mini.jonnattan:8085/status;
+      proxy_pass                          http://192.168.1.72:8085/status;
     }
 
     location /email {
@@ -236,7 +236,7 @@ server {
       proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
       proxy_set_header X-Forwarded-Proto  https;
       proxy_set_header X-Forwarded-Host   $host;
-      proxy_pass                          http://mini.jonnattan:8070/email;
+      proxy_pass                          http://192.168.1.72:8070/email;
     }
 
       location /v2/email {
@@ -246,7 +246,7 @@ server {
         proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto  https;
         proxy_set_header X-Forwarded-Host   $host;
-        proxy_pass                          http://mgkt.jonnattan:8070/email;
+        proxy_pass                          http://192.168.1.71:8070/email;
       }
 
       location /llm {
@@ -256,12 +256,12 @@ server {
         proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto  https;
         proxy_set_header X-Forwarded-Host   $host;
-        proxy_pass                          http://mini.jonnattan:8065/llm;
+        proxy_pass                          http://192.168.1.72:8065/llm;
       }
       
       location /docs {
         proxy_pass_request_headers          on;
-        proxy_pass                          http://mini.jonnattan:8095/docs;
+        proxy_pass                          http://192.168.1.72:8095/docs;
         proxy_set_header                    Host $host;
         proxy_set_header                    X-Real-IP $remote_addr;
         proxy_set_header                    X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -272,7 +272,7 @@ server {
 
       location /v2/docs {
         proxy_pass_request_headers          on;
-        proxy_pass                          http://mgkt.jonnattan:8095/docs;
+        proxy_pass                          http://192.168.1.71:8095/docs;
         proxy_set_header                    Host $host;
         proxy_set_header                    X-Real-IP $remote_addr;
         proxy_set_header                    X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -284,7 +284,7 @@ server {
 
       location /geo {
         proxy_pass_request_headers on;
-        proxy_pass  http://mini.jonnattan:8075/geo;
+        proxy_pass  http://192.168.1.72:8075/geo;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -295,7 +295,7 @@ server {
 
       location /v2/geo {
         proxy_pass_request_headers          on;
-        proxy_pass                          http://mgkt.jonnattan:8075/geo;
+        proxy_pass                          http://192.168.1.71:8075/geo;
         proxy_set_header                    Host $host;
         proxy_set_header                    X-Real-IP $remote_addr;
         proxy_set_header                    X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -306,7 +306,7 @@ server {
 
       location /scraper {
         proxy_pass_request_headers  on;
-        proxy_pass  http://mgkt.jonnattan:8090/scraper;
+        proxy_pass  http://192.168.1.71:8090/scraper;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -322,12 +322,12 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto https;
         proxy_set_header X-Forwarded-Host $host;
-        proxy_pass http://mini.jonnattan:8060/notification;
+        proxy_pass http://192.168.1.72:8060/notification;
       }
 
       location ^~ / {
         proxy_pass_request_headers          on;
-        proxy_pass                          http://hp.jonnattan:8085/;
+        proxy_pass                          http://192.168.1.88:8085/;
         proxy_set_header                    Host $host;
         proxy_set_header                    X-Real-IP $remote_addr;
         proxy_set_header                    X-Forwarded-For $proxy_add_x_forwarded_for;
